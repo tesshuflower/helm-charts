@@ -3,7 +3,32 @@ entries:
   snapscheduler:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2019-12-10T12:53:37.561790319-05:00"
+    created: "2019-12-11T15:34:29.668126679-05:00"
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
+    digest: 7acf73d8a36d22ccbf96e5ad619673146bd58b462a3f698837ea7a52d3e9606c
+    home: https://backube.github.io/snapscheduler/
+    icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
+    keywords:
+    - csi
+    - scheduler
+    - snapshot
+    - storage
+    kubeVersion: ^1.12
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    name: snapscheduler
+    sources:
+    - https://github.com/backube/snapscheduler
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/snapscheduler-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2019-12-11T15:34:29.666620101-05:00"
     description: An operator to take scheduled snapshots of Kubernetes persistent
       volumes
     digest: 82e0d04c37389ebe711cc2db50533573ef3e95f9df23cd9a6dc501938e78c77e
@@ -28,7 +53,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2019-12-10T12:53:37.561216413-05:00"
+    created: "2019-12-11T15:34:29.665573164-05:00"
     description: An operator to take scheduled snapshots of Kubernetes persistent
       volumes
     digest: c23fe8eb7e42c0978dc2e472900d1141e92b7ff9e04b3fc25c2c6ff1940b8808
@@ -51,4 +76,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/snapscheduler-1.0.0.tgz
     version: 1.0.0
-generated: "2019-12-10T12:53:37.560533158-05:00"
+generated: "2019-12-11T15:34:29.664128249-05:00"
