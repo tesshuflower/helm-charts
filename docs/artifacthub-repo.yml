@@ -1,0 +1,6 @@
+---
+# https://github.com/artifacthub/hub/blob/master/docs/repositories.md#ownership-claim
+repositoryID: 2b82845c-64b8-489e-9ecc-b44038e5a85a
+owners: # (optional, used to claim repository ownership)
+  - name: JohnStrunk
+    email: jstrunk@redhat.com
