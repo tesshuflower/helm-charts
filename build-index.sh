@@ -20,7 +20,7 @@ USAGE
 }
 
 if [[ $# -ne 1 ]]; then
-    usage $SCRIPT_NAME
+    usage "$SCRIPT_NAME"
     exit 1
 fi
 NEW_CHART="$1"
