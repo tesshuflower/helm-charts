@@ -3,7 +3,7 @@ entries:
   scribe:
   - annotations:
       artifacthub.io/changes: |
-        - Added: Initial release
+        - Added - Initial release
       artifacthub.io/crds: |
         - kind: ReplicationDestination
           version: v1alpha1
@@ -20,9 +20,9 @@ entries:
       artifacthub.io/operatorCapabilities: Basic Install
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2021-02-10T14:48:11.169899375-05:00"
+    created: "2021-02-10T15:57:27.206666757-05:00"
     description: Asynchronous data replication for Kubernetes
-    digest: 75e9b33c7069f420968b68a6abea312d73b9b1a191e908670d325ae4aec9bde3
+    digest: 6c4180ca11c3d77ea550be4984af84271a617416a219a28a7645a3f28926cb96
     home: https://scribe-replication.readthedocs.io/
     icon: https://raw.githubusercontent.com/backube/scribe/master/docs/media/scribe.svg?sanitize=true
     keywords:
@@ -188,4 +188,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/snapscheduler-1.0.0.tgz
     version: 1.0.0
-generated: "2021-02-10T14:48:11.168909484-05:00"
+generated: "2021-02-10T15:57:27.205798565-05:00"
