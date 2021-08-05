@@ -27,8 +27,10 @@ NEW_CHART="$1"
 
 MERGE_DIR="$(mktemp -d)"
 cp "$NEW_CHART" "$MERGE_DIR"
+[[ ! -f "${NEW_CHART}.prov" ]] || cp "${NEW_CHART}.prov" "$MERGE_DIR"
 helm repo index --url "$REPO_URL" --merge "${CHART_DIR}/index.yaml" "${MERGE_DIR}"
 cp "${MERGE_DIR}/$(basename "${NEW_CHART}")" "${CHART_DIR}"
+[[ ! -f "${MERGE_DIR}/$(basename "${NEW_CHART}").prov" ]] || cp "${MERGE_DIR}/$(basename "${NEW_CHART}").prov" "${CHART_DIR}"
 cp "${MERGE_DIR}/index.yaml" "${CHART_DIR}"
 
 rm -rf "${MERGE_DIR}"
