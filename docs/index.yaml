@@ -346,4 +346,61 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/snapscheduler-1.0.0.tgz
     version: 1.0.0
-generated: "2021-08-03T12:03:17.619376014-04:00"
+  volsync:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Introduced internal "Mover" interface to make adding/maintaining data movers more modular
+        - kind: added
+          description: Added a Condition on the CRs to indicate whether they are synchronizing or idle
+        - kind: added
+          description: Rclone - Added unit tests
+        - kind: changed
+          description: Renamed project - Scribe is now VolSync
+        - kind: changed
+          description: CRD group has changed from `scribe.backube` to `volsync.backube`
+        - kind: changed
+          description: CRD status Conditions changed from operator-lib to the implementation in apimachinery
+        - kind: fixed
+          description: Restic - Fixed error when the volume is empty
+      artifacthub.io/crds: |
+        - kind: ReplicationDestination
+          version: v1alpha1
+          name: replicationdestination.volsync.backube
+          displayName: Replication destination
+          description: Defines the destination of a replicated volume
+        - kind: ReplicationSource
+          version: v1alpha1
+          name: replicationsource.volsync.backube
+          displayName: Replication source
+          description: Defines the source of a replicated volume
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Basic Install
+    apiVersion: v2
+    appVersion: 0.3.0
+    created: "2021-08-05T09:55:56.152697988-04:00"
+    description: Asynchronous data replication for Kubernetes
+    digest: 8907e0b8b60225e26a58027a2013e8f89dc8d8ba76dd86ced6774cc148d98dea
+    home: https://volsync.readthedocs.io/
+    icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+    keywords:
+    - backup
+    - csi
+    - data
+    - disaster recovery
+    - replication
+    - storage
+    kubeVersion: ^1.17.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    name: volsync
+    sources:
+    - https://github.com/backube/volsync
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
+    version: 0.3.0
+generated: "2021-08-05T09:55:56.151892061-04:00"

@@ -1,0 +1,75 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Introduced internal "Mover" interface to make adding/maintaining data movers more modular
+    - kind: added
+      description: Added a Condition on the CRs to indicate whether they are synchronizing or idle
+    - kind: added
+      description: Rclone - Added unit tests
+    - kind: changed
+      description: Renamed project - Scribe is now VolSync
+    - kind: changed
+      description: CRD group has changed from `scribe.backube` to `volsync.backube`
+    - kind: changed
+      description: CRD status Conditions changed from operator-lib to the implementation in apimachinery
+    - kind: fixed
+      description: Restic - Fixed error when the volume is empty
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+apiVersion: v2
+appVersion: 0.3.0
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.17.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.3.0
+
+...
+files:
+  volsync-0.3.0.tgz: sha256:8907e0b8b60225e26a58027a2013e8f89dc8d8ba76dd86ced6774cc148d98dea
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE4A5VIE8sxAVGgHf7ZkI0wS8hnk4FAmEL6+oACgkQZkI0wS8h
+nk7N6RAAtCy4BHDllI4K23a/0CRCGzrDOH8kM0i7v2LCqyPjhoMqGcpta7rhtWo2
+Ms963aL4Xa9eC8ZxOICT+vrBFm7IWvuyTUeT+Hd9DJTZBy44xheJ+clPJBmnevGh
+BxDb68YMRvmJdUAUyCTLdB/gMQAbpSBdcFmKXw3rMwgnX+StW4/W0OlNsaEMoF6l
+M7rS3Pyj3OAFrd3QTuBQReSP/AUMiqgYRQ6No3UsOaPJsz0TzdY1/f9yzJ9fMO0C
+8s/7c9XlKetPBgtz4GCHRGOX45K3yEOpMst7q57uxzXO34NDasxiRMqTitGBisUh
+jQazHcwFQly2OS4zycBAixgPVDEoMv4+OswPDOZF50upm39z3EYfb8nUNIeSgcFG
+b99iMdD3PHbV9zquedSLZfXGrEA+t3Mva73Fsy9zOtD2g4xCTWL2kWsbry5785k0
+9B3i/j2+hQRydTS5VUAMLmwXYu5scOcYAExeTA5mhB2cp60ICKI/7gyzmNzOaPex
+EEV+ZIhfQLLOBukdsXPx4RzrgpwJLyYObRfmJlQfvr58N+qGDCWqmPGEbjSroLXe
+2b6CdbDWc4B6I5eRQQp+XXCmtCQgWUl8oc/hIQ7zFLJqQ1lTise4BtyuOUd1+bBT
+gdj4005mGIz+aWNuo1sl/k7QF3ofvFKtg33459TRlPnMVyoGjho=
+=3d+h
+-----END PGP SIGNATURE-----
