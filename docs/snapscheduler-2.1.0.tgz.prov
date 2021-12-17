@@ -1,0 +1,86 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Ability to configure resource requests for RBAC proxy container when deploying via Helm chart
+    - kind: added
+      description: Ability to configure container image used for kube-rbac-proxy
+    - kind: changed
+      description: Moved operator to operator-sdk 1.15
+    - kind: changed
+      description: Build w/ Go 1.17
+    - kind: changed
+      description: Upgrade kube-rbac-proxy image to 0.11.0
+    - kind: changed
+      description: Deploy w/ single replica by default
+  artifacthub.io/crds: |
+    - kind: SnapshotSchedule
+      version: v1
+      name: snapshotschedule.snapscheduler.backube
+      displayName: Snapshot schedule
+      description: Defines a schedule for automated volume snapshots
+  artifacthub.io/crdsExamples: |
+    - apiVersion: v1
+      kind: SnapshotSchedule
+      metadata:
+        name: daily
+      spec:
+        retention:
+          maxCount: 7
+        schedule: "0 0 * * *"
+    - apiVersion: v1
+      kind: SnapshotSchedule
+      metadata:
+        name: weekly
+      spec:
+        retention:
+          maxCount: 4
+        schedule: "0 0 * * 0"
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Seamless Upgrades
+  artifacthub.io/signKey: |
+    fingerprint: 74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+apiVersion: v2
+appVersion: 2.1.0
+description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+home: https://backube.github.io/snapscheduler/
+icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
+keywords:
+- - csi
+- - scheduler
+- - snapshot
+- - storage
+kubeVersion: ^1.17.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+name: snapscheduler
+sources:
+- - https://github.com/backube/snapscheduler
+type: application
+version: 2.1.0
+
+...
+files:
+  snapscheduler-2.1.0.tgz: sha256:30a6769ef073daebf569878920c095baa33d31369351e9ab6503f63a40f3a575
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE4A5VIE8sxAVGgHf7ZkI0wS8hnk4FAmG8ktAACgkQZkI0wS8h
+nk58PBAAq8XapkAd4PLL/+wanKoiM4ju7vIdroGr3V7N7T6kSQD18o47NskkjXHb
+CJMzo82DtwG2tYyh2WtHL2HQiCh5LDF1elWr0wsu5/oVVGKV3dxq2w0metNJYW0f
+TJc51MVAW3UVgeGcmK9rxA0xeRD4xfjYpSys8JZO+k3AusApOU5S2D/QGc06y+oF
+ys4HTp6X5nwfrLL1FGsDWbwbic/qdm8MAViKI46qZuQ74LmdGp9OjWABL1g7MWgN
+mq5+5lO+uj6WrXCsbVYnQV/d2oebwbdJifWli4U5s4KSZTgXMMfgW1G7yWkJVn7B
+o60VEyPj2hzKzwxvACzgJousnaqqhjHeR8uUlzpZPKNWdI9NSbZ3qnCE+k/I2le4
+J8K+wBpGPd6MDZh1pjGBmTTcCn2fL5N4Il5xEHWcVL5++bMgCVF8YqX5ESxgucOW
+FO1qbyHOzJ7jqDdrosPhXMA4I3qw7OOmEaIcjoa9fcPpws/B4TOmyqRYx0kVXCf7
+rOL01i4TacvEmMe+zmEhEGHXAizLjFI8VEE1sha2aII+DsIJqYoorP1PUYEvUvxA
+SkjxUO3YdppVYO31gjZeqqgNWPtu4e1ULyJvkICGlMKrXmIgjA+bTs/UWNl3RAPq
+SV624wx+1n5mtMvSQmIrQ/ysPQZEpsJDvjM40Fhzsq6chRot+bE=
+=Pg0N
+-----END PGP SIGNATURE-----
