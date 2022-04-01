@@ -1,0 +1,78 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Snapshot objects are now accessed via `snapshot.storage.k8s.io/v1` API version
+    - kind: removed
+      description: Removed support for Kubernetes < 1.20
+  artifacthub.io/crds: |
+    - kind: SnapshotSchedule
+      version: v1
+      name: snapshotschedule.snapscheduler.backube
+      displayName: Snapshot schedule
+      description: Defines a schedule for automated volume snapshots
+  artifacthub.io/crdsExamples: |
+    - apiVersion: v1
+      kind: SnapshotSchedule
+      metadata:
+        name: daily
+      spec:
+        retention:
+          maxCount: 7
+        schedule: "0 0 * * *"
+    - apiVersion: v1
+      kind: SnapshotSchedule
+      metadata:
+        name: weekly
+      spec:
+        retention:
+          maxCount: 4
+        schedule: "0 0 * * 0"
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Seamless Upgrades
+  artifacthub.io/signKey: |
+    fingerprint: 74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+apiVersion: v2
+appVersion: 3.0.0
+description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+home: https://backube.github.io/snapscheduler/
+icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
+keywords:
+- - csi
+- - scheduler
+- - snapshot
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+name: snapscheduler
+sources:
+- - https://github.com/backube/snapscheduler
+type: application
+version: 3.0.0
+
+...
+files:
+  snapscheduler-3.0.0.tgz: sha256:25c3d2b40b8deeb9e3bf894766025bf0320ae0d99fa9933c6d01243614c511c5
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE4A5VIE8sxAVGgHf7ZkI0wS8hnk4FAmJG6MoACgkQZkI0wS8h
+nk4Reg/+LXOW+8I8LBaIaUOVnNhEqoiHXLeDyHuTbTZr1uWNg8BfThr0QxmIoyoZ
+C8yMpWaES6AvB+L2zn4PwmW3oplzEc3LiJN4R+YUkNtol8Nx3uIRmso2McFT9/oT
+JhTxBSRCT7RZtbRqsC13nspZHi/AHWot3Z4zEWDMcLDsnDK+N+22i4q1HUbvpV47
+K9IZVuseGSmkX9A0XjpntUW4z0khdVUb6P509xxwfHMPm1uvHI0EO1lwCYcYE0xV
+f58pWEr6QqJ9z9kxF1fHzlKFQP6DccqhQOya6ILcDc4GPyEhJ++y4tRp5vEkIP3x
+MHiy4Gk4FRVzeLCycQFInwD04EE9Tp0FXBXqv51b8AwbxpaZQc3uTBgkWdR4TQEJ
+aeLhZ5h3Ihkc9130I+xLVYqtf9+15LyI9+cEPioI+ojla2Qq1U/3DjZMwcdftabv
+wOweT+jMb4OjizGV58nhRdDXn2rerBECYMdDS1Ljv47KBmnM4n/dPqG5569XGNR8
+dHGC5IXut0/nXql4Wyut+wOKvJtwA0FZ2EN7lQEhTP9n6hfAHOSUtPOiVvlYgmE/
+6i2RBjETVj/9JVEWcq5j3SHvxM8bBmBPCfggkHBQ80qzasMm63zeK45TocWu89BR
+UsDH1387oSTlXh/SoPFLA54ZIqMQs4AIbUP0uBWYSfX2L94YeHM=
+=varX
+-----END PGP SIGNATURE-----
