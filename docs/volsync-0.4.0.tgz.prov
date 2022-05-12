@@ -1,0 +1,73 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Add ability to specify container images by SHA hash
+    - kind: added
+      description: Added additional field LastSyncStartTime to CRD status
+    - kind: changed
+      description: Rename CopyMethod None to Direct to make it more descriptive
+    - kind: changed
+      description: Switch snapshot API version from snapshot.storage.k8s.io/v1beta1 to snapshot.storage.k8s.io/v1 so that VolSync remains compatible w/ Kubernetes 1.24+
+    - kind: changed
+      description: Minimum Kubernetes version is now 1.20
+    - kind: fixed
+      description: Resources weren't always removed after each sync iteration
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+apiVersion: v2
+appVersion: 0.4.0
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.4.0
+
+...
+files:
+  volsync-0.4.0.tgz: sha256:cdf942e206b20881b62ba4bdc33aa136cd5e436d45daf9345698829549b6ee3a
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE4A5VIE8sxAVGgHf7ZkI0wS8hnk4FAmJ9MSsACgkQZkI0wS8h
+nk7HNw/8CPRAyScK7VXWdZaA0JQ48NVyKb4H2DZgd8j9OqjfuXdEVEaPNLB7zay5
+FlF9jS7gqz9rnpo4DvMWwozWNNRHYdeTljnGWlaZEpxcB0UYUvwbnDmc7BHFLWFT
+Mfg1+26s6A0EBJCydHaXloj5P3w22ZBoUpFgcnQqYPvj98OmPgUm6R/uIhemL8F8
+QT0cLU8/FmkqUYK7hZ/droI//211J2aYspNEzRKA0igHlarVEs3YUBom9FnkKFRw
+V2Ry4cxBMDLHPEb5Ztg+KFCt4R1b2sKkgT7Dpl1ud3qhwPpb8Qu6LW+S+Wxi68fb
+5vsHW9YvB2kPrvarVwlzkyJtPtrODIRAcY3qatJZxSU5E2W2q/JH4h8qS9bSwggm
+ZvXUQWYO8Xd74Y3mf9jclrlEGPQOiXeOmWzX9NFP4mQ19edlvszGSagW8VHVMCz4
+4/GyMVzuFLfKoSh1fGWKfhY8MYNoc4wdha6uJMZ234Ot/tu0MNb1FxYFDGxPf8tX
+uV3LFokanrxTLt7evlEm2TKCAQzWuP8cdJWxMf4jHPyOi7OJmbgLfa+0Gasfe3B4
+niYgOVJZVnQtivfp3rKVOCjWgjueN+EAzkPr9YmyoRWbfxp4prppoLq0z0iynJcy
+tki2g27NXjtiNtjCFqHnBOAqbxmvFg/yTV7LnGCQzoS1kKzVWuc=
+=ivTd
+-----END PGP SIGNATURE-----

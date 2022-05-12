@@ -476,6 +476,60 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: added
+          description: Add ability to specify container images by SHA hash
+        - kind: added
+          description: Added additional field LastSyncStartTime to CRD status
+        - kind: changed
+          description: Rename CopyMethod None to Direct to make it more descriptive
+        - kind: changed
+          description: Switch snapshot API version from snapshot.storage.k8s.io/v1beta1 to snapshot.storage.k8s.io/v1 so that VolSync remains compatible w/ Kubernetes 1.24+
+        - kind: changed
+          description: Minimum Kubernetes version is now 1.20
+        - kind: fixed
+          description: Resources weren't always removed after each sync iteration
+      artifacthub.io/crds: |
+        - kind: ReplicationDestination
+          version: v1alpha1
+          name: replicationdestination.volsync.backube
+          displayName: Replication destination
+          description: Defines the destination of a replicated volume
+        - kind: ReplicationSource
+          version: v1alpha1
+          name: replicationsource.volsync.backube
+          displayName: Replication source
+          description: Defines the source of a replicated volume
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Basic Install
+    apiVersion: v2
+    appVersion: 0.4.0
+    created: "2022-05-12T12:10:38.804139777-04:00"
+    description: Asynchronous data replication for Kubernetes
+    digest: cdf942e206b20881b62ba4bdc33aa136cd5e436d45daf9345698829549b6ee3a
+    home: https://volsync.readthedocs.io/
+    icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+    keywords:
+    - backup
+    - csi
+    - data
+    - disaster recovery
+    - replication
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    name: volsync
+    sources:
+    - https://github.com/backube/volsync
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/volsync-0.4.0.tgz
+    version: 0.4.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
           description: Introduced internal "Mover" interface to make adding/maintaining data movers more modular
         - kind: added
           description: Added a Condition on the CRs to indicate whether they are synchronizing or idle
@@ -529,4 +583,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2022-04-01T07:59:09.577629709-04:00"
+generated: "2022-05-12T12:10:38.803302783-04:00"
