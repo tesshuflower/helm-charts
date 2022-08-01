@@ -102,6 +102,67 @@ entries:
   snapscheduler:
   - annotations:
       artifacthub.io/changes: |
+        - kind: added
+          description: Added ability to control TopologySpreadConstraints
+        - kind: changed
+          description: Upgrade operator-sdk to 1.22.0
+        - kind: security
+          description: Upgrade quay.io/brancz/kube-rbac-proxy to v0.13.0
+      artifacthub.io/crds: |
+        - kind: SnapshotSchedule
+          version: v1
+          name: snapshotschedule.snapscheduler.backube
+          displayName: Snapshot schedule
+          description: Defines a schedule for automated volume snapshots
+      artifacthub.io/crdsExamples: |
+        - apiVersion: v1
+          kind: SnapshotSchedule
+          metadata:
+            name: daily
+          spec:
+            retention:
+              maxCount: 7
+            schedule: "0 0 * * *"
+        - apiVersion: v1
+          kind: SnapshotSchedule
+          metadata:
+            name: weekly
+          spec:
+            retention:
+              maxCount: 4
+            schedule: "0 0 * * 0"
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Seamless Upgrades
+      artifacthub.io/signKey: |
+        fingerprint: 74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+        url: https://keys.openpgp.org/vks/v1/by-fingerprint/74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+    apiVersion: v2
+    appVersion: 3.1.0
+    created: "2022-08-01T10:28:51.300925329-04:00"
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    digest: c9d9750781db0a72674d9ca0deecbca781fe0ccc5d567a05456200769ea59f51
+    home: https://backube.github.io/snapscheduler/
+    icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
+    keywords:
+    - csi
+    - scheduler
+    - snapshot
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    name: snapscheduler
+    sources:
+    - https://github.com/backube/snapscheduler
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/snapscheduler-3.1.0.tgz
+    version: 3.1.0
+  - annotations:
+      artifacthub.io/changes: |
         - kind: changed
           description: Snapshot objects are now accessed via `snapshot.storage.k8s.io/v1` API version
         - kind: removed
@@ -583,4 +644,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2022-05-12T12:10:38.803302783-04:00"
+generated: "2022-08-01T10:28:51.300157962-04:00"
