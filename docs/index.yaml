@@ -537,6 +537,67 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: added
+          description: Users can manually label destination Snapshot objects with volsync.backube/do-not-delete to prevent VolSync from deleting them. This provides a way for users to avoid having a Snapshot deleted while they are trying to use it. Users are then responsible for deleting the Snapshot.
+        - kind: added
+          description: Publish Kubernetes Events to help troubleshooting
+        - kind: added
+          description: New Syncthing-based mover for live data replication
+        - kind: changed
+          description: Operator-SDK upgraded to 1.22.0
+        - kind: changed
+          description: Rclone upgraded to 1.59.0
+        - kind: changed
+          description: Restic upgraded to 0.13.1
+        - kind: changed
+          description: Syncthing upgraded to 1.20.1
+        - kind: security
+          description: kube-rbac-proxy upgraded to 0.13.0
+      artifacthub.io/crds: |
+        - kind: ReplicationDestination
+          version: v1alpha1
+          name: replicationdestination.volsync.backube
+          displayName: Replication destination
+          description: Defines the destination of a replicated volume
+        - kind: ReplicationSource
+          version: v1alpha1
+          name: replicationsource.volsync.backube
+          displayName: Replication source
+          description: Defines the source of a replicated volume
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Basic Install
+      artifacthub.io/signKey: |
+        fingerprint: 74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+        url: https://keys.openpgp.org/vks/v1/by-fingerprint/74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+    apiVersion: v2
+    appVersion: 0.5.0
+    created: "2022-09-15T15:43:36.914468236-04:00"
+    description: Asynchronous data replication for Kubernetes
+    digest: 9c8dc3360e7af972133a5971a1d608051b7dfcf56100e0197b6c2aceb0a676c5
+    home: https://volsync.readthedocs.io/
+    icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+    keywords:
+    - backup
+    - csi
+    - data
+    - disaster recovery
+    - replication
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    name: volsync
+    sources:
+    - https://github.com/backube/volsync
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/volsync-0.5.0.tgz
+    version: 0.5.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
           description: Add ability to specify container images by SHA hash
         - kind: added
           description: Added additional field LastSyncStartTime to CRD status
@@ -644,4 +705,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2022-08-01T10:28:51.300157962-04:00"
+generated: "2022-09-15T15:43:36.913002607-04:00"
