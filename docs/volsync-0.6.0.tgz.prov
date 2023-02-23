@@ -1,0 +1,69 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Chart option "manageCRDs" to control whether the chart installs/upgrades/removes the Volsync CRDs. This is a breaking change that requires manually annotating/labeling the CRDs in order to upgrade from a previous chart release. See the project Changelog for more specific instructions.
+    - kind: security
+      description: kube-rbac-proxy upgraded to 0.13.1
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+  artifacthub.io/signKey: |
+    fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+apiVersion: v2
+appVersion: 0.6.0
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+- - email: tflower@redhat.com
+  name: Tesshu Flower
+  url: https://github.com/tesshuflower
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.6.0
+
+...
+files:
+  volsync-0.6.0.tgz: sha256:ac1bdf1c423e02a562e4f9e725292e8c0179464f3d02864c18f9c97c2cfec33b
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEE/9ByVt/h9bMKyFyobIQcZegJ0bkFAmP3zrwACgkQbIQcZegJ
+0blCjwv/UEJbaUzsrCK444PG8ucFF4ASOifFTe1wDG9LkEaSCpIu2Fb8Hp4AV5jM
+qOITBLD/GGSR2MFiBnjj519fNmBx14CYNQ321u9M8dvfkCXjPhgkkmG8jzD1zbO/
+d/jzmZcXdAksB5Po0XYrwsxaPVmwEMQbbe2wwx8/xsmGZdUQqNFNi9sP9oekLLKS
+Q7F9JtiIeo4nZlWe/kc9fkugFCcBnvqHJao6guayqGKvZnL1WddwCnEWkrcb4GqG
+cqrVA0rOsVux3fhloku6XJhTbfGUY5GQePByh/ZCp5DBLl+iuQIT3zZE1439cblx
+Rf0Vtj7OmnQ3miexyGB1Wuf1pjZ4CxjWLfzhXPjuIS8uJvm71WlFGp6VHq4RlGH2
+7Ct1H95kNggjxbK4mCZzQO33fdMBMuUnLPRoC6KV9nP3YqIsp9m3zrxT3+5NgH03
+Q7L6aDJNMsIiPbtQ03BmfKlxzQUNSfJnMACmwYgzKUBbfrhtu9bVEmgQ+unUXYiM
+xjYwhwkj
+=RL9h
+-----END PGP SIGNATURE-----

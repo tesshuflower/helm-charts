@@ -614,6 +614,58 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: added
+          description: Chart option "manageCRDs" to control whether the chart installs/upgrades/removes the Volsync CRDs. This is a breaking change that requires manually annotating/labeling the CRDs in order to upgrade from a previous chart release. See the project Changelog for more specific instructions.
+        - kind: security
+          description: kube-rbac-proxy upgraded to 0.13.1
+      artifacthub.io/crds: |
+        - kind: ReplicationDestination
+          version: v1alpha1
+          name: replicationdestination.volsync.backube
+          displayName: Replication destination
+          description: Defines the destination of a replicated volume
+        - kind: ReplicationSource
+          version: v1alpha1
+          name: replicationsource.volsync.backube
+          displayName: Replication source
+          description: Defines the source of a replicated volume
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Basic Install
+      artifacthub.io/signKey: |
+        fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+        url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+    apiVersion: v2
+    appVersion: 0.6.0
+    created: "2023-02-23T15:41:48.526287-05:00"
+    description: Asynchronous data replication for Kubernetes
+    digest: ac1bdf1c423e02a562e4f9e725292e8c0179464f3d02864c18f9c97c2cfec33b
+    home: https://volsync.readthedocs.io/
+    icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+    keywords:
+    - backup
+    - csi
+    - data
+    - disaster recovery
+    - replication
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    - email: tflower@redhat.com
+      name: Tesshu Flower
+      url: https://github.com/tesshuflower
+    name: volsync
+    sources:
+    - https://github.com/backube/volsync
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/volsync-0.6.0.tgz
+    version: 0.6.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
           description: Users can manually label destination Snapshot objects with volsync.backube/do-not-delete to prevent VolSync from deleting them. This provides a way for users to avoid having a Snapshot deleted while they are trying to use it. Users are then responsible for deleting the Snapshot.
         - kind: added
           description: Publish Kubernetes Events to help troubleshooting
@@ -846,4 +898,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2023-02-23T13:04:27.534505-05:00"
+generated: "2023-02-23T15:41:48.524853-05:00"
