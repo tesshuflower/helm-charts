@@ -144,7 +144,8 @@ entries:
     apiVersion: v2
     appVersion: 3.2.0
     created: "2022-10-10T14:29:07.700963511-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 1f57ad883df99aa018d24b6681add915e2411ad0971bd41d231b194685890185
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -205,7 +206,8 @@ entries:
     apiVersion: v2
     appVersion: 3.1.0
     created: "2022-08-01T10:28:51.300925329-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: c9d9750781db0a72674d9ca0deecbca781fe0ccc5d567a05456200769ea59f51
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -264,7 +266,8 @@ entries:
     apiVersion: v2
     appVersion: 3.0.0
     created: "2022-04-01T07:59:09.578372678-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 25c3d2b40b8deeb9e3bf894766025bf0320ae0d99fa9933c6d01243614c511c5
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -331,7 +334,8 @@ entries:
     apiVersion: v2
     appVersion: 2.1.0
     created: "2021-12-17T08:40:06.681049238-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 30a6769ef073daebf569878920c095baa33d31369351e9ab6503f63a40f3a575
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -395,7 +399,8 @@ entries:
     apiVersion: v2
     appVersion: 2.0.0
     created: "2021-08-03T12:03:17.620820506-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 77ebc6a70ce37abb6bbc46486e90b0ba000dcfae252bfd9f143270de8912684c
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -433,7 +438,8 @@ entries:
     apiVersion: v2
     appVersion: 1.2.0
     created: "2021-04-05T14:39:11.687929418-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 5c0b9c1d9d7fcbc3bc4d8284c5683529bac0b2db35c568a4f273bedd5600b79f
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -457,7 +463,8 @@ entries:
   - apiVersion: v2
     appVersion: 1.1.1
     created: "2020-05-13T12:41:58.95997986-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: e478d86dafa3f217399f0d63da99b706deda451faea7d442c33c158d79544162
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -481,7 +488,8 @@ entries:
   - apiVersion: v2
     appVersion: 1.1.1
     created: "2020-04-24T15:52:16.930455083-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 5a9f0bc9bb4e8759cc44129135c102536954bb2a2787e05073bc73549c068601
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -505,7 +513,8 @@ entries:
   - apiVersion: v2
     appVersion: 1.1.0
     created: "2020-02-13T11:32:42.287824651-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: afa586df65a3b1a948c6b14137aee48cf655ecbb61b58d0b95c505032ff03ae1
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -529,7 +538,8 @@ entries:
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2019-12-11T15:34:29.668126679-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 7acf73d8a36d22ccbf96e5ad619673146bd58b462a3f698837ea7a52d3e9606c
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -553,7 +563,8 @@ entries:
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2019-12-10T12:53:37.561790319-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: 82e0d04c37389ebe711cc2db50533573ef3e95f9df23cd9a6dc501938e78c77e
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -577,7 +588,8 @@ entries:
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2019-12-10T09:48:48.334448149-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent
+      volumes
     digest: c23fe8eb7e42c0978dc2e472900d1141e92b7ff9e04b3fc25c2c6ff1940b8808
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg
@@ -599,6 +611,70 @@ entries:
     - https://backube.github.io/helm-charts/snapscheduler-1.0.0.tgz
     version: 1.0.0
   volsync:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Users can manually label destination Snapshot objects with volsync.backube/do-not-delete to prevent VolSync from deleting them. This provides a way for users to avoid having a Snapshot deleted while they are trying to use it. Users are then responsible for deleting the Snapshot.
+        - kind: added
+          description: Publish Kubernetes Events to help troubleshooting
+        - kind: added
+          description: New Syncthing-based mover for live data replication
+        - kind: changed
+          description: Operator-SDK upgraded to 1.22.0
+        - kind: changed
+          description: Rclone upgraded to 1.59.0
+        - kind: changed
+          description: Restic upgraded to 0.13.1
+        - kind: changed
+          description: Syncthing upgraded to 1.20.1
+        - kind: security
+          description: kube-rbac-proxy upgraded to 0.13.0
+      artifacthub.io/crds: |
+        - kind: ReplicationDestination
+          version: v1alpha1
+          name: replicationdestination.volsync.backube
+          displayName: Replication destination
+          description: Defines the destination of a replicated volume
+        - kind: ReplicationSource
+          version: v1alpha1
+          name: replicationsource.volsync.backube
+          displayName: Replication source
+          description: Defines the source of a replicated volume
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Basic Install
+      artifacthub.io/signKey: |
+        fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+        url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+    apiVersion: v2
+    appVersion: 0.5.2
+    created: "2023-02-23T13:04:27.538877-05:00"
+    description: Asynchronous data replication for Kubernetes
+    digest: 365430802ef16daf96acca1eec97461877026ff5687e362e375d2e2214ef2c08
+    home: https://volsync.readthedocs.io/
+    icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+    keywords:
+    - backup
+    - csi
+    - data
+    - disaster recovery
+    - replication
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    - email: tflower@redhat.com
+      name: Tesshu Flower
+      url: https://github.com/tesshuflower
+    name: volsync
+    sources:
+    - https://github.com/backube/volsync
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/volsync-0.5.2.tgz
+    version: 0.5.2
   - annotations:
       artifacthub.io/changes: |
         - kind: added
@@ -770,4 +846,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2022-10-10T14:29:07.700022156-04:00"
+generated: "2023-02-23T13:04:27.534505-05:00"

@@ -1,0 +1,81 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Users can manually label destination Snapshot objects with volsync.backube/do-not-delete to prevent VolSync from deleting them. This provides a way for users to avoid having a Snapshot deleted while they are trying to use it. Users are then responsible for deleting the Snapshot.
+    - kind: added
+      description: Publish Kubernetes Events to help troubleshooting
+    - kind: added
+      description: New Syncthing-based mover for live data replication
+    - kind: changed
+      description: Operator-SDK upgraded to 1.22.0
+    - kind: changed
+      description: Rclone upgraded to 1.59.0
+    - kind: changed
+      description: Restic upgraded to 0.13.1
+    - kind: changed
+      description: Syncthing upgraded to 1.20.1
+    - kind: security
+      description: kube-rbac-proxy upgraded to 0.13.0
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+  artifacthub.io/signKey: |
+    fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+apiVersion: v2
+appVersion: 0.5.2
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+- - email: tflower@redhat.com
+  name: Tesshu Flower
+  url: https://github.com/tesshuflower
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.5.2
+
+...
+files:
+  volsync-0.5.2.tgz: sha256:365430802ef16daf96acca1eec97461877026ff5687e362e375d2e2214ef2c08
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEE/9ByVt/h9bMKyFyobIQcZegJ0bkFAmP3qqIACgkQbIQcZegJ
+0bneUgv8C/mfWg0+0g9o4l+P5P5wXzZtaznqCapAEKLI1XmcLOdxgaoRnFoYkF0r
+O9ZRt/dRefy3d2XqSxrIF6PYWUBJfycg4/9FZclM/j9W4ZnFEKoIeatADOm+uVim
+DNfJWtwdWyl1z2YCHj1Np84b5fULPrGrzawk3BFQjoin+nn2xadvxseOBUMKCXLo
+MA1BtG0R7jSqHInPCnCWTcd18zJ2w1r7a4syX/9nbyIZGJg261UQdAAj/fRQbiXU
+jqfFtuGwhFZYly7sLHULgKac9nLLebc4GhC5lF8H2682QXYUi+lBCPk6oWumnEAR
+OrHG9lCP09kpiOPOIzvgMZqcQ2jEId5Sc5MyzDImg6kxy6gK+6W8Pc5fFC5obSsD
+gtLjYHfsdQDmA92xQkEZpXZH0tYwyPQlv8+Mve1WScJe8CPJi43Xx+HuzkLV+POc
+4MF49EAj5xO+7sA7lNwV4/WE5fB+q9w1uxOClq6hvqrMy3QATjPtnG1LxgfmgpGY
+AdcP7vJk
+=3nQ5
+-----END PGP SIGNATURE-----
