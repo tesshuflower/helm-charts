@@ -613,6 +613,72 @@ entries:
   volsync:
   - annotations:
       artifacthub.io/changes: |
+        - kind: added
+          description: New rsync-tls mover that uses stunnel instead of sshd for rsync traffic
+        - kind: added
+          description: moverServiceAccount parameter in the spec for advanced users
+        - kind: changed
+          description: All movers except rsync-ssh run as a normal user (see docs)
+        - kind: changed
+          description: VolSync now uses a single container image for the controller and all movers
+        - kind: changed
+          description: Rclone upgraded to v1.61.1
+        - kind: changed
+          description: Restic upgraded to 0.15.1
+        - kind: changed
+          description: Syncthing upgraded to v1.23.1
+        - kind: fixed
+          description: Syncthing should ignore lost+found directory
+        - kind: security
+          description: kube-rbac-proxy upgraded to 0.14.0
+      artifacthub.io/crds: |
+        - kind: ReplicationDestination
+          version: v1alpha1
+          name: replicationdestination.volsync.backube
+          displayName: Replication destination
+          description: Defines the destination of a replicated volume
+        - kind: ReplicationSource
+          version: v1alpha1
+          name: replicationsource.volsync.backube
+          displayName: Replication source
+          description: Defines the source of a replicated volume
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Basic Install
+      artifacthub.io/signKey: |
+        fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+        url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+    apiVersion: v2
+    appVersion: 0.7.0
+    created: "2023-03-14T17:07:18.728815-04:00"
+    description: Asynchronous data replication for Kubernetes
+    digest: 869ff72f1f7caf0787716f22c9a951175141f8e0cd7d0dafd90ec8f8c7fa8709
+    home: https://volsync.readthedocs.io/
+    icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+    keywords:
+    - backup
+    - csi
+    - data
+    - disaster recovery
+    - replication
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    - email: tflower@redhat.com
+      name: Tesshu Flower
+      url: https://github.com/tesshuflower
+    name: volsync
+    sources:
+    - https://github.com/backube/volsync
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/volsync-0.7.0.tgz
+    version: 0.7.0
+  - annotations:
+      artifacthub.io/changes: |
         - kind: fixed
           description: set HTTP_PROXY, HTTPS_PROXY, NO_PROXY on mover if cluster-wide proxy.
       artifacthub.io/crds: |
@@ -948,4 +1014,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2023-03-07T15:51:36.975927-05:00"
+generated: "2023-03-14T17:07:18.727292-04:00"
