@@ -1,0 +1,69 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Modified leader election settings (LeaseDuration, RenewDeadline, RetryPeriod)
+    - kind: changed
+      description: Syncthing upgraded to v1.23.2
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+  artifacthub.io/signKey: |
+    fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+apiVersion: v2
+appVersion: 0.7.1
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+- - email: tflower@redhat.com
+  name: Tesshu Flower
+  url: https://github.com/tesshuflower
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.7.1
+
+...
+files:
+  volsync-0.7.1.tgz: sha256:a571064c122a902d9d0bf41290c61e801dbacd386d61d179119f24ddb6ccbf30
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEE/9ByVt/h9bMKyFyobIQcZegJ0bkFAmQm8JIACgkQbIQcZegJ
+0blMWwv+MN2Lpx0afCDwZESTzXHKsZYDzNnNQ4nPv4tNBB0EFkpbRbUvzaFPPu7L
++GLk1BPF0z3PRc04zluIFL10uKJjZJ6JF+sYi6YqLiR+40ubBpAmAmqWPdr71EKj
+9EkWcjk1Wbrkm5GmvyuIrldKOC+ThoNwFuAEDGCGlXdyNWUBFm96Yk3JFCZdlkQr
+ZLi7dMA9i1WPzPIVXmMmvigJzCbmHFvkHh0vB775Fh1HwuvYNBpdXpzGClYfOc0C
+KopW1PpY/XT6gFjg8mS9Lo9j39zyp7GeS5z4GvODZiLit91qUbqbRqHFubcbYAfJ
+BHGjrQwuUnQzUfTc2rV6z4NHCcRIly32LSZSfDaTCEspYKMiZ0f/He4IdcTCYHlZ
+dremadL/a88Loerkxh+mZzG5DzLLAdL4Bvf51qwLhlDW7aTdQwoO2G8wp71l98dS
+NSnvdNcZsQ3Z7P698eTotpIjdEzP7T3Ayga5JbmMAShknpmqG6ZK2eOB7jJ5ObD+
+zT3rf27K
+=NtpY
+-----END PGP SIGNATURE-----
