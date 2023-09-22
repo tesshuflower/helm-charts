@@ -101,6 +101,69 @@ entries:
     version: 0.1.0
   snapscheduler:
   - annotations:
+      artifacthub.io/category: storage
+      artifacthub.io/changes: |
+        - kind: added
+          description: Ability to set a `priorityClassName` for the operator via Helm chart
+        - kind: added
+          description: Ability to set pod labels and annotations for the operator via Helm chart
+        - kind: fixed
+          description: Improve cronspec validation to allow "slash" notation
+      artifacthub.io/containsSecurityUpdates: "true"
+      artifacthub.io/crds: |
+        - kind: SnapshotSchedule
+          version: v1
+          name: snapshotschedule.snapscheduler.backube
+          displayName: Snapshot schedule
+          description: Defines a schedule for automated volume snapshots
+      artifacthub.io/crdsExamples: |
+        - apiVersion: v1
+          kind: SnapshotSchedule
+          metadata:
+            name: daily
+          spec:
+            retention:
+              maxCount: 7
+            schedule: "0 0 * * *"
+        - apiVersion: v1
+          kind: SnapshotSchedule
+          metadata:
+            name: weekly
+          spec:
+            retention:
+              maxCount: 4
+            schedule: "0 0 * * 0"
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Seamless Upgrades
+      artifacthub.io/signKey: |
+        fingerprint: 74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+        url: https://keys.openpgp.org/vks/v1/by-fingerprint/74FC7E7EFD0FF009513CC9E39360133DBD1FF508
+    apiVersion: v2
+    appVersion: 3.3.0
+    created: "2023-09-22T12:29:49.306127821-04:00"
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
+    digest: 0a9d19b218018c579d203ef0a99f1d2adb1d68f9fd4dbaa6424274481fdd4268
+    home: https://backube.github.io/snapscheduler/
+    icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
+    keywords:
+    - csi
+    - scheduler
+    - snapshot
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    name: snapscheduler
+    sources:
+    - https://github.com/backube/snapscheduler
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/snapscheduler-3.3.0.tgz
+    version: 3.3.0
+  - annotations:
       artifacthub.io/changes: |
         - kind: added
           description: Added ability to specify a container hash instead of just a tag
@@ -144,8 +207,7 @@ entries:
     apiVersion: v2
     appVersion: 3.2.0
     created: "2022-10-10T14:29:07.700963511-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 1f57ad883df99aa018d24b6681add915e2411ad0971bd41d231b194685890185
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -206,8 +268,7 @@ entries:
     apiVersion: v2
     appVersion: 3.1.0
     created: "2022-08-01T10:28:51.300925329-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: c9d9750781db0a72674d9ca0deecbca781fe0ccc5d567a05456200769ea59f51
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -266,8 +327,7 @@ entries:
     apiVersion: v2
     appVersion: 3.0.0
     created: "2022-04-01T07:59:09.578372678-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 25c3d2b40b8deeb9e3bf894766025bf0320ae0d99fa9933c6d01243614c511c5
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -334,8 +394,7 @@ entries:
     apiVersion: v2
     appVersion: 2.1.0
     created: "2021-12-17T08:40:06.681049238-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 30a6769ef073daebf569878920c095baa33d31369351e9ab6503f63a40f3a575
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -399,8 +458,7 @@ entries:
     apiVersion: v2
     appVersion: 2.0.0
     created: "2021-08-03T12:03:17.620820506-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 77ebc6a70ce37abb6bbc46486e90b0ba000dcfae252bfd9f143270de8912684c
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -438,8 +496,7 @@ entries:
     apiVersion: v2
     appVersion: 1.2.0
     created: "2021-04-05T14:39:11.687929418-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 5c0b9c1d9d7fcbc3bc4d8284c5683529bac0b2db35c568a4f273bedd5600b79f
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -463,8 +520,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.1.1
     created: "2020-05-13T12:41:58.95997986-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: e478d86dafa3f217399f0d63da99b706deda451faea7d442c33c158d79544162
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -488,8 +544,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.1.1
     created: "2020-04-24T15:52:16.930455083-04:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 5a9f0bc9bb4e8759cc44129135c102536954bb2a2787e05073bc73549c068601
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -513,8 +568,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.1.0
     created: "2020-02-13T11:32:42.287824651-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: afa586df65a3b1a948c6b14137aee48cf655ecbb61b58d0b95c505032ff03ae1
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -538,8 +592,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2019-12-11T15:34:29.668126679-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 7acf73d8a36d22ccbf96e5ad619673146bd58b462a3f698837ea7a52d3e9606c
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -563,8 +616,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2019-12-10T12:53:37.561790319-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: 82e0d04c37389ebe711cc2db50533573ef3e95f9df23cd9a6dc501938e78c77e
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg?sanitize=true
@@ -588,8 +640,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.0.0
     created: "2019-12-10T09:48:48.334448149-05:00"
-    description: An operator to take scheduled snapshots of Kubernetes persistent
-      volumes
+    description: An operator to take scheduled snapshots of Kubernetes persistent volumes
     digest: c23fe8eb7e42c0978dc2e472900d1141e92b7ff9e04b3fc25c2c6ff1940b8808
     home: https://backube.github.io/snapscheduler/
     icon: https://raw.githubusercontent.com/backube/snapscheduler/master/docs/media/snapscheduler.svg
@@ -1066,4 +1117,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2023-03-31T10:41:14.67548-04:00"
+generated: "2023-09-22T12:29:49.305307337-04:00"
