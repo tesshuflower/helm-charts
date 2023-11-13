@@ -1,0 +1,81 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: added
+      description: Restic - ReplicationSource/ReplicationDestination can now specify a CustomCA that is from a configmap rather than only from a secret
+    - kind: added
+      description: Rclone - ReplicationSource/ReplicationDestination can now specify a CustomCA that is contained in either a configmap or secret
+    - kind: added
+      description: Restic - New option to run a restic unlock before the backup in the next sync
+    - kind: added
+      description: Restic - Allow passing through of RCLONE_ env vars from the restic secret to the mover job
+    - kind: added
+      description: Volume Populator added for ReplicationDestinations
+    - kind: changed
+      description: Syncthing upgraded to v1.25.0
+    - kind: changed
+      description: Restic upgraded to v0.16.2
+    - kind: changed
+      description: Rclone upgraded to v1.63.1
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+  artifacthub.io/signKey: |
+    fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+apiVersion: v2
+appVersion: 0.8.0
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+- - email: tflower@redhat.com
+  name: Tesshu Flower
+  url: https://github.com/tesshuflower
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.8.0
+
+...
+files:
+  volsync-0.8.0.tgz: sha256:4f9024e350dc6771fd6135849d75caf25692964fe3c7615655b9ec1135b44794
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCAAdFiEE/9ByVt/h9bMKyFyobIQcZegJ0bkFAmVSQs4ACgkQbIQcZegJ
+0bnzkgv+ILdUkrtPWkMLPBfeXqpq0UJ7JOiHIJI3f1Hzi1IdqVWDnjB/J4rGRP+g
+fPKZYVzZw6WQm7y0LtTpzYfyDsv3Xhj8uIJHsyNAFC9VzzG+zqO0dovUbtn//UZB
+aJCjPyjs8SHXMMh7qWMdnO5SaiRSQEG21J65ByZ17/x6/BxaFelyoH5gXHWG2NOv
+YIDSLGLfxraKqxrjQwDWLHu3rOfP6v66F8dXmjfq2uURfA8n/MiAKSdc07jDaLKT
+zjMEi+zJ0JhOLoLfe/kFnDpBAxBJaOMVlUGGjaYbeZg7WyTiYt8SOfaiEN3wjSmN
+b4YXpeDkNyWnC+2Gy3COrnx8smVGhNBlMm4H9mx+5f9z1rDeIFq9crECMVMj4Hn2
+1uC8QDo8V2qfInOhA3kccBKWo7ov5iOQVkqOjBe/exiiPMhsAcRcUOLNKu4LcmNm
+dimun7pPNGfXzwtFQ0nP8khrR8HOjLvoS4ZNvgtVr7OV9X0J4hColEC9ID2qVWM9
+41tDbUiY
+=T1eY
+-----END PGP SIGNATURE-----
