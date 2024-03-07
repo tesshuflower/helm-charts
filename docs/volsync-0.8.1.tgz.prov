@@ -1,0 +1,71 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Updated release to build on golang 1.21
+    - kind: fixed
+      description: Capture error on restic restore when connecting to repository
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+  artifacthub.io/signKey: |
+    fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+apiVersion: v2
+appVersion: 0.8.1
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+- - email: tflower@redhat.com
+  name: Tesshu Flower
+  url: https://github.com/tesshuflower
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.8.1
+
+...
+files:
+  volsync-0.8.1.tgz: sha256:4701fc57453ac72c7e1f65c61c5f4fcf1bf3c5160ae032ad4d3c399878ff778a
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEELJN62s1L75IRl/Zu3HVWsZA6JSsFAmXp50kACgkQ3HVWsZA6
+JSv9WRAAipjtZLeHQShjkPBS4V1Nl5aCekeWV2dMyDCc70LR9BhVS6q6NSQat35G
+KsdvOjapbTl8bMQRd6lD3su+Y8I+Xh6SKXUMk7bmKAnk07zP9nDyFrJk4NlgdUjX
+vmxbjyWUPF/GXDvQOMIEGFxwzKLr3qgyCLu3manmtCr8bH6vr626oshKZt4TGbuL
+9o8Ze1WbVc6ZlHrGxna7jE9fR3EW8COsja1Ur9++7mIuRpYbCemLe177INZ5dZqc
+TqBFzYRIIhgCU4WpQ4HxVB/708HiytVNugR+70dqI6hzCCKs2iMW/XcsoOzgpG4L
+sviHwfBOA0eUZgod9GVtKUROwTrUSSg6XpncXAHn8DKqdSqfkTaQlsDtE/w7SU9D
+P/S2FvE9eYSB33I8ctQVjnxwOSaXB3TZc0DeMn0cb4oEu/aYybQYiPQpSblVRy1+
+jSfATJUBtMDJvYqanRoXlFbSYt9gZOkuF/1e0Owmf83SnHcad7QZZmbNIspLdLYG
+nR4g8CsH/MTLFVSB1dYhnAudGz+P4issgVynFsJ/BAhPz1z0oe8FGT+Zr2oJnv4a
+saEkmmSOvQ2vtkpksQVZXSIhzCZPLfYFYZfpHzmvRDLfAbOvnqsOz3gYGkJSyPO5
+1z5DXT5V53DHEhPQLUCKqhzOoG+OdJQO/M1FoexrzlPSkAo6Oc0=
+=X1JZ
+-----END PGP SIGNATURE-----
