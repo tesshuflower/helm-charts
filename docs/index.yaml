@@ -677,6 +677,58 @@ entries:
   volsync:
   - annotations:
       artifacthub.io/changes: |
+        - kind: fixed
+          description: Allow restic restore from empty or non-initialized path
+        - kind: fixed
+          description: Ignore lost+found on restic backup when checking for empty source volume
+      artifacthub.io/crds: |
+        - kind: ReplicationDestination
+          version: v1alpha1
+          name: replicationdestination.volsync.backube
+          displayName: Replication destination
+          description: Defines the destination of a replicated volume
+        - kind: ReplicationSource
+          version: v1alpha1
+          name: replicationsource.volsync.backube
+          displayName: Replication source
+          description: Defines the source of a replicated volume
+      artifacthub.io/license: AGPL-3.0-or-later
+      artifacthub.io/operator: "true"
+      artifacthub.io/operatorCapabilities: Basic Install
+      artifacthub.io/signKey: |
+        fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+        url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+    apiVersion: v2
+    appVersion: 0.9.1
+    created: "2024-04-12T11:08:04.506390109-04:00"
+    description: Asynchronous data replication for Kubernetes
+    digest: 7c0c55db2b9d2a0f6178b6bf127c87d554c90f86ee3c1a60c74db2ee56c25fe3
+    home: https://volsync.readthedocs.io/
+    icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+    keywords:
+    - backup
+    - csi
+    - data
+    - disaster recovery
+    - replication
+    - storage
+    kubeVersion: ^1.20.0-0
+    maintainers:
+    - email: jstrunk@redhat.com
+      name: John Strunk
+      url: https://github.com/JohnStrunk
+    - email: tflower@redhat.com
+      name: Tesshu Flower
+      url: https://github.com/tesshuflower
+    name: volsync
+    sources:
+    - https://github.com/backube/volsync
+    type: application
+    urls:
+    - https://backube.github.io/helm-charts/volsync-0.9.1.tgz
+    version: 0.9.1
+  - annotations:
+      artifacthub.io/changes: |
         - kind: changed
           description: Syncthing upgraded to v1.27.3
         - kind: changed
@@ -1308,4 +1360,4 @@ entries:
     urls:
     - https://backube.github.io/helm-charts/volsync-0.3.0.tgz
     version: 0.3.0
-generated: "2024-03-20T13:51:21.019327-04:00"
+generated: "2024-04-12T11:08:04.499040425-04:00"
