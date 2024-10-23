@@ -1,0 +1,75 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: fixed
+      description: Fix for rsync-tls to handle replication when there are many files in the pvc root
+    - kind: fixed
+      description: Fix for rsync-tls to handle files in the pvc root that start with `#`
+    - kind: changed
+      description: Syncthing upgraded to v1.27.8
+    - kind: added
+      description: Debug mode for mover jobs added
+  artifacthub.io/crds: |
+    - kind: ReplicationDestination
+      version: v1alpha1
+      name: replicationdestination.volsync.backube
+      displayName: Replication destination
+      description: Defines the destination of a replicated volume
+    - kind: ReplicationSource
+      version: v1alpha1
+      name: replicationsource.volsync.backube
+      displayName: Replication source
+      description: Defines the source of a replicated volume
+  artifacthub.io/license: AGPL-3.0-or-later
+  artifacthub.io/operator: "true"
+  artifacthub.io/operatorCapabilities: Basic Install
+  artifacthub.io/signKey: |
+    fingerprint: 2C937ADACD4BEF921197F66EDC7556B1903A252B
+    url: https://keys.openpgp.org/vks/v1/by-fingerprint/2C937ADACD4BEF921197F66EDC7556B1903A252B
+apiVersion: v2
+appVersion: 0.10.0-rc.1
+description: Asynchronous data replication for Kubernetes
+home: https://volsync.readthedocs.io/
+icon: https://raw.githubusercontent.com/backube/volsync/main/docs/media/volsync.svg?sanitize=true
+keywords:
+- - backup
+- - csi
+- - data
+- - disaster recovery
+- - replication
+- - storage
+kubeVersion: ^1.20.0-0
+maintainers:
+- - email: jstrunk@redhat.com
+  name: John Strunk
+  url: https://github.com/JohnStrunk
+- - email: tflower@redhat.com
+  name: Tesshu Flower
+  url: https://github.com/tesshuflower
+name: volsync
+sources:
+- - https://github.com/backube/volsync
+type: application
+version: 0.10.0-rc.1
+
+...
+files:
+  volsync-0.10.0-rc.1.tgz: sha256:1cdb2e059868c86fcc1714922082079ccd37e81aa104e28f59563c4a732fed66
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEELJN62s1L75IRl/Zu3HVWsZA6JSsFAmcY8tQACgkQ3HVWsZA6
+JSuEsQ//fHASif28nqkn4Ftpz6EFD+IVxnt+IsClwFeqkQkccXTMlmFSi0ge4MWw
+OS0Rdh7iObl8ij/ad9fqe4sQSJ8+s8+CDK2j/ST/Vznsx7I4q5vqZG+XoJFB41wD
+TAMBDVFCt4rCucSbpg7D2liE1MsNtko9j+sgeqqySG5qPzxVD9c2cXjgTm9UCBJn
+8gddTAk+dYVsF71EsCWvvOh7OWPCExARRfdolgOpxyK9/5RKyedbu4/lajOt5DhT
+1uPFUi3n2lkK6ymhJKJ/qPSngdLkBd9raYJUcT7qifFMP6jokhOfh7XEAavvbS+V
+CbIOzWrgu90aVynDMXSYrpGK2O093+VXSqS859mogRNQSzwfQ7lt68Zcqcu27o2g
+lIoq0TCRzVetxgfafCxvD6be1n4e8OMFg96440k9sQNQMy92I1Udq31X8Jxz5ML5
+dJti8JTwvgkq23VuRDKkrJi95BL5MCCfurPuafriHyaLm+gsAM2Ql/vpweJZ7y18
+pbdlh85pOReXxhRuiN+iH/rbT1jxLFKnlFRzCfthVbpOQzGYtL8PYmxpidyl3RDx
+DgV94+1Z3zYGE1jU4UnIO+c1jurDx+RTpbBAc5zAgqcuh2NGnwLQA/YIXc2lzG0a
+nGYlPpBfIrBgXpF38ADyDPvFfKVFAA1GsQzKo10l3MUca9ZkAes=
+=/kdy
+-----END PGP SIGNATURE-----
