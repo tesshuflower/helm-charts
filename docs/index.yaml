@@ -791,7 +791,7 @@ entries:
     - https://github.com/backube/volsync
     type: application
     urls:
-    - https://backube.github.io/helm-charts/volsync-0.11.0-rc.2.tgz
+    - https://tesshuflower.github.io/helm-charts/volsync-0.11.0-rc.2.tgz
     version: 0.11.0-rc.2
   - annotations:
       artifacthub.io/changes: |
@@ -847,7 +847,7 @@ entries:
     - https://github.com/backube/volsync
     type: application
     urls:
-    - https://backube.github.io/helm-charts/volsync-0.11.0-rc.1.tgz
+    - https://tesshuflower.github.io/helm-charts/volsync-0.11.0-rc.1.tgz
     version: 0.11.0-rc.1
   - annotations:
       artifacthub.io/changes: |
@@ -959,7 +959,7 @@ entries:
     - https://github.com/backube/volsync
     type: application
     urls:
-    - https://backube.github.io/helm-charts/volsync-0.10.0-rc.2.tgz
+    - https://tesshuflower.github.io/helm-charts/volsync-0.10.0-rc.2.tgz
     version: 0.10.0-rc.2
   - annotations:
       artifacthub.io/changes: |
@@ -1015,7 +1015,7 @@ entries:
     - https://github.com/backube/volsync
     type: application
     urls:
-    - https://backube.github.io/helm-charts/volsync-0.10.0-rc.1.tgz
+    - https://tesshuflower.github.io/helm-charts/volsync-0.10.0-rc.1.tgz
     version: 0.10.0-rc.1
   - annotations:
       artifacthub.io/changes: |
